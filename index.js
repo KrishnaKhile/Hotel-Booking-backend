@@ -23,7 +23,7 @@ const io = new Server(server, {
   transports:['polling'],
   cors:{
     cors: {
-      origin: "http://192.168.43.87:3000"
+      origin: "*"
     }
   }
 });
@@ -62,7 +62,7 @@ mongoose.connection.on("connected", () => {
 // middleware
 app.use(cors(
   {
-    origin: 'http://192.168.43.87:3000',
+    origin: '*',
     credentials: true,
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
