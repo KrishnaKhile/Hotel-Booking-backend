@@ -23,7 +23,7 @@ const io = new Server(server, {
   transports:['polling'],
   cors:{
     cors: {
-      origin: "https://trps.netlify.app"
+      origin: "http://192.168.43.87:3000"
     }
   }
 });
@@ -62,7 +62,7 @@ mongoose.connection.on("connected", () => {
 // middleware
 app.use(cors(
   {
-    origin: 'https://trps.netlify.app',
+    origin: 'http://192.168.43.87:3000',
     credentials: true,
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
