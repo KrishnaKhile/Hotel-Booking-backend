@@ -62,7 +62,7 @@ mongoose.connection.on("connected", () => {
 // middleware
 app.use(cors(
   {
-    origin: 'https://trps.netlify.app',
+    origin: '*',
     credentials: true,
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
